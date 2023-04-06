@@ -1,0 +1,112 @@
+.poster {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    padding: 60px 80px 88px;
+    background-color: #262626;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  
+  .right-wrapper {
+    position: relative;
+    width: 206px;
+    height: 266px;
+    border: 2.25px solid #e4675b;
+    border-radius: 6px;
+    /* background-image: url("https://ca.slack-edge.com/T2GRZD4TC-UQF78RZ2S-7eb3d990c6c9-512"); */
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: 8px 8px 0 0 #e4675b;
+  }
+  
+  .text-block {
+    font-family: Raleway, sans-serif;
+    color: #fff;
+    font-size: 23px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+  
+  .text-block-2 {
+    font-family: Raleway, sans-serif;
+    color: #eb5757;
+    font-size: 23px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+  }
+  
+  .text-block-3 {
+    font-family: Raleway, sans-serif;
+    color: #fff;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 4.5px;
+    text-transform: uppercase;
+  }
+  
+  .name-wrapper {
+    margin-top: 12px;
+    padding: 5px 14px;
+    min-height: 26px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: #fff;
+  }
+  
+  .hbd-wrapper {
+    margin-bottom: 12px;
+  }
+  
+  .illustration-wrapper {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  .top-graphic {
+    position: absolute;
+    left: -18px;
+    top: -10px;
+    right: auto;
+    bottom: auto;
+  }
+  
+  .bottom-graphic {
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: -10px;
+    bottom: -12px;
+  }
+  
+  .image {
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: 35px;
+    bottom: 35px;
+  }
+  
+  .body-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-2 {
+    width: 205px;
+    height: 166px;
+  }
