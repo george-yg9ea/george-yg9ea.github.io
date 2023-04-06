@@ -8,7 +8,7 @@
 
 .title {
   margin-top: 32px;
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   font-family: Roboto, sans-serif;
   font-size: 45px;
   line-height: 52px;
@@ -16,7 +16,7 @@
 }
 
 
-.custom-button {
+.custom-button-1 {
   background-color: #262626 ;
   border: none;
   border-radius: 200px;
@@ -26,9 +26,18 @@
   text-decoration: none;
   display: inline-block;
   width: 340px;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   margin-top: 4px;
+  height: 40px;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.1px;
+  transition-duration: 0.2s;
+}
+
+.custom-button-1:hover {
+  background-color: #1a1a1a;
+  color: white;
 }
 
 .custom-button-2 {
@@ -40,17 +49,31 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.1px;
+  transition-duration: 0.4s;
+}
+
+.custom-button-2:hover {
+  background-color: #1a1a1a;
+  color: white;
 }
 
 .custom-text-field {
-  width: 100%;
-  padding: 12px 20px;
-  display: inline-block;
-  border: 1px solid #ccc;
+  width: 340px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #00000020;
   border-radius: 4px;
   box-sizing: border-box;
+  margin-bottom: 20px;
+  height: 40px;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  /* letter-spacing: 0.1px; */
 }
 
 .poster-wrapper {
@@ -58,6 +81,7 @@
   display: inline-block;
   height: auto;
   border-radius: 12px;
+  margin-top: 32px;
   margin-bottom: 24px;
   overflow: hidden;
 }
