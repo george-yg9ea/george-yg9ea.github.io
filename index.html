@@ -8,64 +8,61 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="container">
 
-  <h1>Birthday Poster</h1>
+  <div class="title">Poster Generator</div>
 
   <form>
     <br>
-    <label for="employee-name">Employee Name:</label>
-    <input type="text" id="employee-name" name="employee-name">
+    <!-- <select id="Poster-Type" name="Poster-Type" data-name="Poster Type" class="select-field w-select"><option value="">Birthday</option></select> -->
+    <input type="text" id="employee-name" name="employee-name" class="custom-text-field" placeholder="Employee Name">
     <br>
     <br>
-    <label for="image-url">Image Link:</label>
-    <input type="text" id="image-url" name="image-url">
+    <input type="text" id="image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
     <br>
     <br>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit" class="custom-button">
     <br>
     <br>
     <br>
   </form>
 
 
-
-
-  <div class="poster"><img
-      src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd0f7ec49bb2af25089f3_WRG%20Logo.svg"
-      loading="lazy" alt="" class="image">
-    <div class="content-wrapper">
-      <div class="left-wrapper">
-        <div class="illustration-wrapper">
+  <div class="poster-wrapper">
+    <div class="poster"><img
+        src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd0f7ec49bb2af25089f3_WRG%20Logo.svg"
+        loading="lazy" alt="" class="image">
+      <div class="content-wrapper">
+        <div class="left-wrapper">
+          <div class="illustration-wrapper">
+            <img
+              src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bc561a1186385ac35125c_Birthday%20Graphics.svg"
+              loading="lazy" alt="" class="image-2">
+          </div>
+          <div class="hbd-wrapper">
+            <div class="text-block">Happy Birthday</div>
+            <div class="text-block-2">to you</div>
+          </div>
+          <div class="name-wrapper">
+            <div class="text-block-3"><span id="output"></span></div>
+          </div>
+        </div>
+        <div class="right-wrapper"><img
+            src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd02180142505d79bcd56_top%20graphic.svg"
+            loading="lazy" alt="" class="top-graphic">
           <img
-            src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bc561a1186385ac35125c_Birthday%20Graphics.svg"
-            loading="lazy" alt="" class="image-2">
+            src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd02107fbfc6b38b3e00b_bottom%20graphic.svg"
+            loading="lazy" alt="" class="bottom-graphic">
         </div>
-        <div class="hbd-wrapper">
-          <div class="text-block">Happy Birthday</div>
-          <div class="text-block-2">to you</div>
-        </div>
-        <div class="name-wrapper">
-          <div class="text-block-3"><span id="output"></span></div>
-        </div>
-      </div>
-      <div class="right-wrapper"><img
-          src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd02180142505d79bcd56_top%20graphic.svg"
-          loading="lazy" alt="" class="top-graphic">
-        <img
-          src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd02107fbfc6b38b3e00b_bottom%20graphic.svg"
-          loading="lazy" alt="" class="bottom-graphic">
       </div>
     </div>
+
   </div>
 
-  <br>
-  <br>
-  <br>
 
-  <button id="downloadButton">Download JPEG</button>
+  <button id="downloadButton" class="custom-button-2">Download Poster</button>
 
-<!-- Script 1 -->
+  <!-- Script 1 -->
   <script>
     const form = document.querySelector('form');
     const output = document.querySelector('#output');
@@ -96,7 +93,7 @@
 
 
 
-<!-- Download script -->
+  <!-- Download script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 
   <script>
@@ -130,7 +127,7 @@
         });
     });
 
-</script>
+  </script>
 
 
 
