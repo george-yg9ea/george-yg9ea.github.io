@@ -5,6 +5,22 @@
   align-items: center;
 }
 
+.birthday-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.congrats-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
 
 .title {
   margin-top: 32px;
@@ -15,6 +31,41 @@
   text-align: center;
 }
 
+.select-field {
+  width: 340px;
+  padding: 8px 9px;
+  display: flex;
+  border: 1px solid #00000020;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  height: 40px;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+}
+
+.select option:first-child {
+  color: gray;
+}
+
+.first-option{
+  color: #00000060;
+}
+
+.custom-text-field {
+  width: 340px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #00000020;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  height: 40px;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+  /* letter-spacing: 0.1px; */
+}
 
 .custom-button-1 {
   background-color: #262626 ;
@@ -61,20 +112,7 @@
   color: white;
 }
 
-.custom-text-field {
-  width: 340px;
-  padding: 8px 12px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #00000020;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  height: 40px;
-  font-size: 14px;
-  font-family: Roboto, sans-serif;
-  /* letter-spacing: 0.1px; */
-}
+
 
 .poster-wrapper {
   position: relative;
@@ -157,6 +195,7 @@
   
   .hbd-wrapper {
     margin-bottom: 12px;
+    width: 230px;
   }
   
   .illustration-wrapper {
