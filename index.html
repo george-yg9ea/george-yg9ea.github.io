@@ -23,9 +23,9 @@
 
   <!-- Birthday poster div -->
   <div id="birthdayDiv" class="birthday-wrapper hidden">
-    <form>
-      <input type="text" id="employee-name" name="employee-name" class="custom-text-field" placeholder="Employee Name">
-      <input type="text" id="image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
+    <form id="birthday-form">
+      <input type="text" id="birthday-employee-name" name="employee-name" class="custom-text-field" placeholder="Employee Name">
+      <input type="text" id="birthday-image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
       <input type="submit" value="Submit" class="custom-button-1">
     </form>
 
@@ -44,11 +44,11 @@
               <div class="text-block">Happy Birthday</div>
               <div class="text-block-2">to you</div>
             </div>
-            <div class="name-wrapper">
-              <div class="text-block-3"><span id="output"></span></div>
+            <div class="birthday-name-wrapper">
+              <div class="text-block-3"><span id="birthday-name"></span></div>
             </div>
           </div>
-          <div class="right-wrapper"><img
+          <div class="birthday-right-wrapper" id="birthday-right-wrapper"><img
               src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd02180142505d79bcd56_top%20graphic.svg"
               loading="lazy" alt="" class="top-graphic">
             <img
@@ -60,15 +60,15 @@
 
 
     </div>
-    <button id="downloadButton" class="custom-button-2">Download Poster</button>
+    <button id="downloadButton" class="custom-button-2">Download</button>
   </div>
 
 
   <!-- Congrats poster div -->
   <div id="congratsDiv" class="congrats-wrapper hidden">
-    <form>
-      <input type="text" id="employee-name" name="employee-name" class="custom-text-field" placeholder="Employee Name">
-      <input type="text" id="image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
+    <form id="congrats-form">
+      <input type="text" id="congrats-employee-name" name="employee-name" class="custom-text-field" placeholder="Employee Name">
+      <input type="text" id="congrats-image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
       <input type="submit" value="Submit" class="custom-button-1">
     </form>
 
@@ -87,11 +87,11 @@
               <div class="text-block">YOU ARE A</div>
               <div class="text-block-2">ROCKSTAR</div>
             </div>
-            <div class="name-wrapper">
-              <div class="text-block-3"><span id="output"></span></div>
+            <div class="congrats-name-wrapper">
+              <div class="text-block-3"><span id="congrats-name"></span></div>
             </div>
           </div>
-          <div class="right-wrapper"><img
+          <div class="congrats-right-wrapper" id="congrats-right-wrapper"><img
               src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd02180142505d79bcd56_top%20graphic.svg"
               loading="lazy" alt="" class="top-graphic">
             <img
@@ -102,7 +102,7 @@
       </div>
 
   </div>
-    <button id="downloadButton" class="custom-button-2">Download Poster</button>
+    <button id="downloadButton" class="custom-button-2">Download</button>
   </div>
 
 

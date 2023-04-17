@@ -36,25 +36,60 @@ select.addEventListener("change", function () {
 
 
 
-
-
 //   Script to apply the name and image to the poster
-const form = document.querySelector('form');
-const output = document.querySelector('#output');
-const rightWrapper = document.querySelector('.right-wrapper');
 
-form.addEventListener('submit', function (event) {
-    event.preventDefault();
 
-    const employeeNameInput = document.querySelector('#employee-name');
-    const imageUrlInput = document.querySelector('#image-url');
+// Get references to the HTML elements
+const birthdayForm = document.getElementById('birthday-form');
+const birthdayEmployeeNameInput = document.getElementById('birthday-employee-name');
+const birthdayImageUrlInput = document.getElementById('birthday-image-url');
+const birthdayNameOutput = document.getElementById('birthday-name');
+const birthdayRightWrapper = document.getElementById('birthday-right-wrapper');
 
-    const employeeName = employeeNameInput.value;
-    const imageUrl = imageUrlInput.value;
+const congratsForm = document.getElementById('congrats-form');
+const congratsEmployeeNameInput = document.getElementById('congrats-employee-name');
+const congratsImageUrlInput = document.getElementById('congrats-image-url');
+const congratsNameOutput = document.getElementById('congrats-name');
+const congratsRightWrapper = document.getElementById('congrats-right-wrapper');
 
-    rightWrapper.style.backgroundImage = `url(${imageUrl})`;
-    output.textContent = employeeName;
-});
+// Function to handle birthday-form submission
+function handleBirthdayFormSubmit(event) {
+	event.preventDefault(); // Prevent the form from submitting normally
+
+	// Get the values from the form fields
+	const birthdayEmployeeName = birthdayEmployeeNameInput.value;
+	const birthdayImageUrl = birthdayImageUrlInput.value;
+
+	// Set the text of div1
+	birthdayNameOutput.textContent = birthdayEmployeeName;
+    birthdayRightWrapper.style.backgroundImage = `url(${birthdayImageUrl})`;
+}
+
+// Function to handle congrats-form submission
+function handleCongratsFormSubmit(event) {
+	event.preventDefault(); // Prevent the form from submitting normally
+
+	// Get the values from the form fields
+	const congratsEmployeeName = congratsEmployeeNameInput.value;
+	const congratsImageUrl = congratsImageUrlInput.value;
+
+	// Set the text of div1
+	congratsNameOutput.textContent = congratsEmployeeName;
+    congratsRightWrapper.style.backgroundImage = `url(${congratsImageUrl})`;
+}
+
+// Add event listeners to the forms
+birthdayForm.addEventListener('submit', handleBirthdayFormSubmit);
+congratsForm.addEventListener('submit', handleCongratsFormSubmit);
+
+
+
+
+
+
+
+
+
 
 
 // Script to convert the div to jpeg
