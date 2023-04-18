@@ -1,4 +1,3 @@
-
 .container {
   display: flex;
   flex-direction: column;
@@ -12,6 +11,12 @@
 }
 
 .congrats-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anniversary-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +53,7 @@
   color: gray;
 }
 
-.first-option{
+.first-option {
   color: #00000060;
 }
 
@@ -68,7 +73,7 @@
 }
 
 .custom-button-1 {
-  background-color: #262626 ;
+  background-color: #262626;
   border: none;
   border-radius: 200px;
   color: white;
@@ -92,7 +97,7 @@
 }
 
 .custom-button-2 {
-  background-color: #262626 ;
+  background-color: #262626;
   border: none;
   border-radius: 200px;
   color: white;
@@ -124,137 +129,204 @@
   overflow: hidden;
 }
 
+
 .poster {
-    position: relative;
-    display: inline-block;
-    height: auto;
-    padding: 60px 80px 88px;
-    background-color: #262626;
-  }
-  
-  .content-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
-  }
-  
-  .birthday-right-wrapper {
-    position: relative;
-    width: 206px;
-    height: 266px;
-    border: 2.25px solid #e4675b;
-    border-radius: 6px;
-    /* background-image: url("https://ca.slack-edge.com/T2GRZD4TC-UQF78RZ2S-7eb3d990c6c9-512"); */
-    background-position: 50% 50%;
-    background-size: cover;
-    box-shadow: 8px 8px 0 0 #e4675b;
-  }
+  position: relative;
+  display: inline-block;
+  height: auto;
+  padding: 60px 80px 88px;
+  background-color: #262626;
+}
 
-  .congrats-right-wrapper {
-    position: relative;
-    width: 206px;
-    height: 266px;
-    border: 2.25px solid #e4675b;
-    border-radius: 6px;
-    /* background-image: url("https://ca.slack-edge.com/T2GRZD4TC-UQF78RZ2S-7eb3d990c6c9-512"); */
-    background-position: 50% 50%;
-    background-size: cover;
-    box-shadow: 8px 8px 0 0 #e4675b;
-  }
-  
-  .text-block {
-    font-family: Raleway, sans-serif;
-    color: #fff;
-    font-size: 23px;
-    line-height: 26px;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-  }
-  
-  .text-block-2 {
-    font-family: Raleway, sans-serif;
-    color: #eb5757;
-    font-size: 23px;
-    line-height: 26px;
-    font-weight: 700;
-    text-align: center;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-  }
-  
-  .text-block-3 {
-    font-family: Raleway, sans-serif;
-    color: #fff;
-    font-size: 15px;
-    line-height: 26px;
-    text-align: center;
-    letter-spacing: 4.5px;
-    text-transform: uppercase;
-  }
-  
-  .birthday-name-wrapper {
-    margin-top: 12px;
-    padding: 5px 14px;
-    min-height: 26px;
-    border-style: solid;
-    border-width: 0.5px;
-    border-color: #fff;
-  }
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
 
-  .congrats-name-wrapper {
-    margin-top: 12px;
-    padding: 5px 14px;
-    min-height: 26px;
-    border-style: solid;
-    border-width: 0.5px;
-    border-color: #fff;
-  }
-  
-  .hbd-wrapper {
-    margin-bottom: 12px;
-    width: 230px;
-  }
-  
-  .illustration-wrapper {
-    margin-bottom: 12px;
-    text-align: center;
-  }
-  
-  .top-graphic {
-    position: absolute;
-    left: -18px;
-    top: -10px;
-    right: auto;
-    bottom: auto;
-  }
-  
-  .bottom-graphic {
-    position: absolute;
-    left: auto;
-    top: auto;
-    right: -10px;
-    bottom: -12px;
-  }
-  
-  .image {
-    position: absolute;
-    left: auto;
-    top: auto;
-    right: 35px;
-    bottom: 35px;
-  }
-  
-  .body-2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .image-2 {
-    width: 205px;
-    height: 166px;
-  }
+.birthday-right-wrapper {
+  position: relative;
+  width: 206px;
+  height: 266px;
+  border: 2.25px solid #e4675b;
+  border-radius: 6px;
+  /* background-image: url("https://ca.slack-edge.com/T2GRZD4TC-UQF78RZ2S-7eb3d990c6c9-512"); */
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 8px 8px 0 0 #e4675b;
+}
+
+.congrats-right-wrapper {
+  position: relative;
+  width: 206px;
+  height: 266px;
+  border: 2.25px solid #e4675b;
+  border-radius: 6px;
+  /* background-image: url("https://ca.slack-edge.com/T2GRZD4TC-UQF78RZ2S-7eb3d990c6c9-512"); */
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 8px 8px 0 0 #e4675b;
+}
+
+.anniversary-right-wrapper {
+  position: relative;
+  width: 206px;
+  height: 266px;
+  border: 2.25px solid #e4675b;
+  border-radius: 6px;
+  /* background-image: url("https://ca.slack-edge.com/T2GRZD4TC-UQF78RZ2S-7eb3d990c6c9-512"); */
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 8px 8px 0 0 #e4675b;
+}
+
+.text-block {
+  width: 230px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.text-block-2 {
+  color: #eb5757;
+  text-align: center;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.text-block-3 {
+  font-family: Raleway, sans-serif;
+  color: #fff;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+}
+
+
+.left-wrapper {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+
+.birthday-name-wrapper {
+  margin-top: 12px;
+  padding: 5px 14px;
+  min-height: 26px;
+  min-width: 160px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #fff;
+}
+
+.congrats-name-wrapper {
+  margin-top: 12px;
+  padding: 5px 14px;
+  min-height: 26px;
+  min-width: 160px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #fff;
+}
+
+.anniversary-name-wrapper {
+  margin-top: 12px;
+  padding: 5px 14px;
+  min-height: 26px;
+  min-width: 160px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: #fff;
+}
+
+.hbd-wrapper {
+  margin-bottom: 12px;
+  width: 230px;
+}
+
+.anniversary-wrapper {
+  z-index: 2;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.illustration-wrapper {
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.number {
+  z-index: 2;
+  width: 140px;
+  height: 160px;
+  position: relative;
+}
+
+.burst {
+  z-index: 1;
+  width: auto;
+  max-width: none;
+  position: absolute;
+  top: -50px;
+  bottom: 0%;
+  left: -64px;
+  right: 64px;
+}
+
+.anniversary-wrapper {
+  z-index: 2;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.top-graphic {
+  position: absolute;
+  left: -18px;
+  top: -10px;
+  right: auto;
+  bottom: auto;
+}
+
+.bottom-graphic {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: -10px;
+  bottom: -12px;
+}
+
+.image {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: 35px;
+  bottom: 35px;
+}
+
+.body-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-2 {
+  width: 205px;
+  height: 166px;
+}

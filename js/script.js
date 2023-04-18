@@ -9,10 +9,12 @@ select.addEventListener("change", function () {
     // Get the divs that correspond to each option
     const birthdayDiv = document.getElementById("birthday-div");
     const congratsDiv = document.getElementById("congrats-div");
+    const anniversaryDiv = document.getElementById("anniversary-div");
 
     // Hide all divs by adding the 'hidden' class to them
     birthdayDiv.classList.add("hidden");
     congratsDiv.classList.add("hidden");
+    anniversaryDiv.classList.add("hidden");
 
     // Get the value of the selected option
     const selectedOption = select.value;
@@ -27,6 +29,12 @@ select.addEventListener("change", function () {
         congratsDiv.classList.remove("hidden");
     }
 
+    if (selectedOption === "anniversary") {
+        anniversaryDiv.classList.remove("hidden");
+    }
+
+
+    
     // If 'select' is selected, hide all divs by adding the 'hidden' class to them
     if (selectedOption === "select") {
         birthdayDiv.classList.add("hidden");
@@ -49,6 +57,16 @@ const congratsImageUrlInput = document.getElementById('congrats-image-url');
 const congratsNameOutput = document.getElementById('congrats-name');
 const congratsRightWrapper = document.getElementById('congrats-right-wrapper');
 const congratsDownloadButton = document.getElementById('congrats-download-button');
+
+
+const anniversaryForm = document.getElementById('anniversary-form');
+const anniversaryEmployeeNameInput = document.getElementById('anniversary-employee-name');
+const anniversaryNumberInput = document.getElementById('anniversary-number');
+const anniversaryImageUrlInput = document.getElementById('anniversary-image-url');
+const anniversaryEmployeeNameOutput = document.getElementById('anniversary-employee-name-output');
+const anniversaryRightWrapper = document.getElementById('anniversary-right-wrapper');
+const anniversaryNumberOutput = document.getElementById('anniversary-number-output');
+const anniversaryDownloadButton = document.getElementById('anniversary-download-button');
 
 
 // Function to handle birthday-form submission
@@ -75,6 +93,25 @@ function handleCongratsFormSubmit(event) {
     // Set the text of div1
     congratsNameOutput.textContent = congratsEmployeeName;
     congratsRightWrapper.style.backgroundImage = `url(${congratsImageUrl})`;
+
+    if
+
+
+
+
+}
+
+// Function to handle anniversary-form submission
+function handleanniversaryFormSubmit(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    // Get the values from the form fields
+    const anniversaryEmployeeName = anniversaryEmployeeNameInput.value;
+    const anniversaryImageUrl = anniversaryImageUrlInput.value;
+
+    // Set the text of div1
+    anniversaryEmployeeNameOutput.textContent = anniversaryEmployeeName;
+    anniversaryRightWrapper.style.backgroundImage = `url(${anniversaryImageUrl})`;
 }
 
 
@@ -143,9 +180,14 @@ function handleCongratsDownload() {
         });
 }
 
+
+
 // Add event listeners to the forms
 birthdayForm.addEventListener('submit', handleBirthdayFormSubmit);
 birthdayDownloadButton.addEventListener('click', handleBirthdayDownload);
 
 congratsForm.addEventListener('submit', handleCongratsFormSubmit);
 congratsDownloadButton.addEventListener('click', handleCongratsDownload);
+
+anniversaryForm.addEventListener('submit', handleanniversaryFormSubmit);
+// anniversaryDownloadButton.addEventListener('click', handleanniversaryDownload);
