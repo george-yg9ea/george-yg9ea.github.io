@@ -93,12 +93,6 @@ function handleCongratsFormSubmit(event) {
     // Set the text of div1
     congratsNameOutput.textContent = congratsEmployeeName;
     congratsRightWrapper.style.backgroundImage = `url(${congratsImageUrl})`;
-
-    if
-
-
-
-
 }
 
 // Function to handle anniversary-form submission
@@ -108,10 +102,55 @@ function handleanniversaryFormSubmit(event) {
     // Get the values from the form fields
     const anniversaryEmployeeName = anniversaryEmployeeNameInput.value;
     const anniversaryImageUrl = anniversaryImageUrlInput.value;
+    const anniversaryNumber = anniversaryNumberInput.value;
 
     // Set the text of div1
     anniversaryEmployeeNameOutput.textContent = anniversaryEmployeeName;
     anniversaryRightWrapper.style.backgroundImage = `url(${anniversaryImageUrl})`;
+
+
+    if (anniversaryNumber === "1") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-01.svg"
+    }
+    
+    if (anniversaryNumber === "2") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-02.svg"
+    }
+    
+    if (anniversaryNumber === "3") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-03.svg"
+    }
+    
+    if (anniversaryNumber === "4") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-04.svg"
+    }
+    
+    if (anniversaryNumber === "5") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-05.svg"
+    }
+    
+    if (anniversaryNumber === "6") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-06.svg"
+    }
+    
+    if (anniversaryNumber === "7") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-07.svg"
+    }
+    
+    if (anniversaryNumber === "8") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-08.svg"
+    }
+    
+    if (anniversaryNumber === "9") {
+        anniversaryNumberOutput.src = "https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/30ca1431b6f826c6143f2353af7f935d71db9b3e/images/number-09.svg"
+    }
+    
+
+
+
+
+
+
 }
 
 
