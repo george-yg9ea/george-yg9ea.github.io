@@ -35,10 +35,6 @@ select.addEventListener("change", function () {
 });
 
 
-
-
-
-
 // Get references to the HTML elements
 const birthdayForm = document.getElementById('birthday-form');
 const birthdayEmployeeNameInput = document.getElementById('birthday-employee-name');
@@ -57,27 +53,27 @@ const congratsDownloadButton = document.getElementById('congrats-download-button
 
 // Function to handle birthday-form submission
 function handleBirthdayFormSubmit(event) {
-	event.preventDefault(); // Prevent the form from submitting normally
+    event.preventDefault(); // Prevent the form from submitting normally
 
-	// Get the values from the form fields
-	const birthdayEmployeeName = birthdayEmployeeNameInput.value;
-	const birthdayImageUrl = birthdayImageUrlInput.value;
+    // Get the values from the form fields
+    const birthdayEmployeeName = birthdayEmployeeNameInput.value;
+    const birthdayImageUrl = birthdayImageUrlInput.value;
 
-	// Set the text of div1
-	birthdayNameOutput.textContent = birthdayEmployeeName;
+    // Set the text of div1
+    birthdayNameOutput.textContent = birthdayEmployeeName;
     birthdayRightWrapper.style.backgroundImage = `url(${birthdayImageUrl})`;
 }
 
 // Function to handle congrats-form submission
 function handleCongratsFormSubmit(event) {
-	event.preventDefault(); // Prevent the form from submitting normally
+    event.preventDefault(); // Prevent the form from submitting normally
 
-	// Get the values from the form fields
-	const congratsEmployeeName = congratsEmployeeNameInput.value;
-	const congratsImageUrl = congratsImageUrlInput.value;
+    // Get the values from the form fields
+    const congratsEmployeeName = congratsEmployeeNameInput.value;
+    const congratsImageUrl = congratsImageUrlInput.value;
 
-	// Set the text of div1
-	congratsNameOutput.textContent = congratsEmployeeName;
+    // Set the text of div1
+    congratsNameOutput.textContent = congratsEmployeeName;
     congratsRightWrapper.style.backgroundImage = `url(${congratsImageUrl})`;
 }
 
