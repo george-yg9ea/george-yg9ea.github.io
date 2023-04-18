@@ -7,8 +7,8 @@ const select = document.getElementById("select");
 select.addEventListener("change", function () {
 
     // Get the divs that correspond to each option
-    const birthdayDiv = document.getElementById("birthdayDiv");
-    const congratsDiv = document.getElementById("congratsDiv");
+    const birthdayDiv = document.getElementById("birthday-div");
+    const congratsDiv = document.getElementById("congrats-div");
 
     // Hide all divs by adding the 'hidden' class to them
     birthdayDiv.classList.add("hidden");
@@ -36,7 +36,7 @@ select.addEventListener("change", function () {
 
 
 
-//   Script to apply the name and image to the poster
+
 
 
 // Get references to the HTML elements
@@ -45,12 +45,15 @@ const birthdayEmployeeNameInput = document.getElementById('birthday-employee-nam
 const birthdayImageUrlInput = document.getElementById('birthday-image-url');
 const birthdayNameOutput = document.getElementById('birthday-name');
 const birthdayRightWrapper = document.getElementById('birthday-right-wrapper');
+const birthdayDownloadButton = document.getElementById('birthday-download-button');
 
 const congratsForm = document.getElementById('congrats-form');
 const congratsEmployeeNameInput = document.getElementById('congrats-employee-name');
 const congratsImageUrlInput = document.getElementById('congrats-image-url');
 const congratsNameOutput = document.getElementById('congrats-name');
 const congratsRightWrapper = document.getElementById('congrats-right-wrapper');
+const congratsDownloadButton = document.getElementById('congrats-download-button');
+
 
 // Function to handle birthday-form submission
 function handleBirthdayFormSubmit(event) {
@@ -78,47 +81,75 @@ function handleCongratsFormSubmit(event) {
     congratsRightWrapper.style.backgroundImage = `url(${congratsImageUrl})`;
 }
 
-// Add event listeners to the forms
-birthdayForm.addEventListener('submit', handleBirthdayFormSubmit);
-congratsForm.addEventListener('submit', handleCongratsFormSubmit);
 
-
-
-
-
-
-
-
-
-
-
-// Script to convert the div to jpeg
-const downloadButton = document.getElementById('downloadButton');
-const poster = document.getElementsByClassName('poster')[0];
-
-downloadButton.addEventListener('click', () => {
-    // Use dom-to-image to take a screenshot of the poster element
+// Function to handle download button click for birthday poster.
+function handleBirthdayDownload() {
+    // Get the birthday poster element
+    const birthdayPoster = document.getElementById('birthday-poster');
+    // Set the options for the image download
     const options = {
-        width: poster.offsetWidth * 2,
-        height: poster.offsetHeight * 2,
+        width: birthdayPoster.offsetWidth * 2,
+        height: birthdayPoster.offsetHeight * 2,
         style: {
             transform: 'scale(2)',
             transformOrigin: 'top left',
         },
     };
-    domtoimage.toJpeg(poster, options)
+
+    // Use the dom-to-image library to create a jpeg image of the poster
+    domtoimage.toJpeg(birthdayPoster, options)
         .then(function (dataUrl) {
-            // Create a link to download the image
+            // Create a link element to download the image
             const link = document.createElement('a');
             link.download = 'birthday-poster.jpeg';
             link.href = dataUrl;
 
-            // Click the link to trigger the download
+            // Append the link to the body and click it to start the download
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
         })
         .catch(function (error) {
+            // Log an error message if there is an issue with creating the image
             console.error('oops, something went wrong!', error);
         });
-});
+}
+
+
+// Function to handle download button click for congrats poster.
+function handleCongratsDownload() {
+    // Get the congrats poster element.
+    const congratsPoster = document.getElementById('congrats-poster');
+    // Set the options for the downloaded image.
+    const options = {
+        width: congratsPoster.offsetWidth * 2,
+        height: congratsPoster.offsetHeight * 2,
+        style: {
+            transform: 'scale(2)',
+            transformOrigin: 'top left',
+        },
+    };
+    // Convert the poster to a JPEG image using dom-to-image library.
+    domtoimage.toJpeg(congratsPoster, options)
+        .then(function (dataUrl) {
+            // Create a link to download the image.
+            const link = document.createElement('a');
+            link.download = 'congrats-poster.jpeg';
+            link.href = dataUrl;
+            // Click the link to trigger the download.
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        })
+        .catch(function (error) {
+            // Handle any errors that occur during the conversion.
+            console.error('oops, something went wrong!', error);
+        });
+}
+
+// Add event listeners to the forms
+birthdayForm.addEventListener('submit', handleBirthdayFormSubmit);
+birthdayDownloadButton.addEventListener('click', handleBirthdayDownload);
+
+congratsForm.addEventListener('submit', handleCongratsFormSubmit);
+congratsDownloadButton.addEventListener('click', handleCongratsDownload);
