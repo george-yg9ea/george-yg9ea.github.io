@@ -4,28 +4,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Posts</title>
+  <title>Graphic Design</title>
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
 </head>
 
 <body class="container">
 
-  <div class="title">Posts</div>
+  <div class="title">Graphic Design</div>
 
   <select id="select" class="select-field">
-    <option value="select">Select post type</option>
-    <option value="birthday">Birthday</option>
-    <option value="congrats">Congrats</option>
-    <option value="anniversary">Anniversary</option>
+    <option value="select">Select design type</option>
+    <option value="notion-banner">Notion Banner</option>
+    <option value="birthday">🚧 Birthday</option>
+    <option value="congrats">🚧 Congrats</option>
+    <option value="anniversary">🚧 Anniversary</option>
   </select>
+
+
+  <!-- Notion banner div -->
+  <div id="notion-banner-div" class="notion-banner-section-wrapper hidden">
+    <form id="notion-banner-form">
+      <input type="text" id="notion-banner-semibold-text" name="notion-banner-semibold-text" class="custom-text-field"
+        placeholder="Semibold Text">
+      <input type="text" id="notion-banner-light-text" name="notion-banner-light-text" class="custom-text-field"
+        placeholder="Light Text">
+      <input type="submit" value="Submit" class="custom-button-1">
+    </form>
+
+    <div class="poster-wrapper">
+      <div class="notion-banner-wrapper" id="notion-banner">
+        <div class="notion-banner-content-wrapper"><img
+            src="https://raw.githubusercontent.com/george-yg9ea/george-yg9ea.github.io/7968dca157858c0ed373c200e505946577ed7978/images/wrg-logo.svg"
+            loading="lazy" alt="" class="notion-banner-wrg-logo">
+          <div class="notion-banner-heading-wrapper">
+            <div class="notion-banner-heading">
+              <div class="notion-banner-heading-semibold" id="notion-banner-heading-semibold-text">Lorem</div>
+              <div class="notion-banner-heading-light" id="notion-banner-heading-light-text">Ipsum</div>
+            </div>
+            <div class="notion-banner-red-line"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="notion-banner-download-button" class="custom-button-2">Download</button>
+  </div>
+
+
 
 
 
   <!-- Birthday poster div -->
   <div id="birthday-div" class="birthday-wrapper hidden">
     <form id="birthday-form">
-      <input type="text" id="birthday-employee-name" name="employee-name" class="custom-text-field" placeholder="Employee Name">
+      <input type="text" id="birthday-employee-name" name="employee-name" class="custom-text-field"
+        placeholder="Employee Name">
       <input type="text" id="birthday-image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
       <input type="submit" value="Submit" class="custom-button-1">
     </form>
@@ -68,7 +101,8 @@
   <!-- Congrats poster div -->
   <div id="congrats-div" class="congrats-wrapper hidden">
     <form id="congrats-form">
-      <input type="text" id="congrats-employee-name" name="employee-name" class="custom-text-field" placeholder="Employee Name">
+      <input type="text" id="congrats-employee-name" name="employee-name" class="custom-text-field"
+        placeholder="Employee Name">
       <input type="text" id="congrats-image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
       <input type="submit" value="Submit" class="custom-button-1">
     </form>
@@ -102,35 +136,35 @@
         </div>
       </div>
 
-  </div>
+    </div>
     <button id="congrats-download-button" class="custom-button-2">Download</button>
   </div>
 
 
   <!-- Anniversary poster div -->
   <div id="anniversary-div" class="anniversary-wrapper hidden">
-    
-        <form id="anniversary-form">
-        
-          <select id="anniversary-number" class="select-field">
-            <option value="select">Select anniversary</option>
-            <option value="1">1st</option>
-            <option value="2">2nd</option>
-            <option value="3">3rd</option>
-            <option value="4">4th</option>
-            <option value="5">5th</option>
-            <option value="6">6th</option>
-            <option value="7">7th</option>
-            <option value="8">8th</option>
-            <option value="9">9th</option>
-          </select>
 
-          <input type="text" id="anniversary-employee-name" name="employee-name" class="custom-text-field"
-            placeholder="Employee Name">
-          <input type="text" id="anniversary-image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
-          <input type="submit" value="Submit" class="custom-button-1">
-        </form>
-    
+    <form id="anniversary-form">
+
+      <select id="anniversary-number" class="select-field">
+        <option value="select">Select anniversary</option>
+        <option value="1">1st</option>
+        <option value="2">2nd</option>
+        <option value="3">3rd</option>
+        <option value="4">4th</option>
+        <option value="5">5th</option>
+        <option value="6">6th</option>
+        <option value="7">7th</option>
+        <option value="8">8th</option>
+        <option value="9">9th</option>
+      </select>
+
+      <input type="text" id="anniversary-employee-name" name="employee-name" class="custom-text-field"
+        placeholder="Employee Name">
+      <input type="text" id="anniversary-image-url" name="image-url" class="custom-text-field" placeholder="Image URL">
+      <input type="submit" value="Submit" class="custom-button-1">
+    </form>
+
     <div class="poster-wrapper">
       <div class="poster">
         <img src="https://uploads-ssl.webflow.com/623aedb71fa7a9244c1dd95d/642bd0f7ec49bb2af25089f3_WRG%20Logo.svg"
@@ -158,10 +192,10 @@
         </div>
       </div>
     </div>
-    
-    </div>
 
-<script src="js/script.js"></script>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
